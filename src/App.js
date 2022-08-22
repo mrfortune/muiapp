@@ -19,6 +19,11 @@ const theme = createTheme({
       main: green[500],
     },
   },
+  typography: {
+    h1: {
+      fontWeight: 600,
+    },
+  },
 });
 
 function App() {
