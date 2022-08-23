@@ -24,6 +24,12 @@ const theme = createTheme({
       fontWeight: 600,
     },
   },
+  // root:{
+  //   minHeight: '100vh',
+  //   backgroundImage:`url(${process.env.PUBLIC_URL + '/assets/bg_new.jpeg'})`,
+  //   backgroundRepeat:"no-repeat",
+  //   backgroundSize:"cover",
+  // },
 });
 
 function App() {

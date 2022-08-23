@@ -27,7 +27,15 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Home() {
 	return (
 	<Container maxwidth="sx">
-		<Box sx={{  minHeight: '100vh', display:'flex', justifyContent:'center', alignItems: 'center', textAlign:'center', height:'100vh'}} >
+		<Box sx={{  minHeight: '100vh', 
+    display:'flex', justifyContent:'center', 
+    alignItems: 'center', 
+    textAlign:'center', 
+    height:'100vh', 
+    backgroundImage:`url(${process.env.PUBLIC_URL + '/assets/bg_new.jpeg'})`,
+    backgroundRepeat:"no-repeat",
+    backgroundSize:"cover",
+    }} >
 			<Typography variant='h1' color="primary">
 				Designing for the Human Experience.
 			</Typography>
