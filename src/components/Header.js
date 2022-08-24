@@ -55,7 +55,7 @@ const ResponsiveAppBar = () => {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
-              flexGrow:"4"
+              flexGrow:"6"
             }}
           >
         WorldShaker
@@ -100,7 +100,7 @@ const ResponsiveAppBar = () => {
             </Menu>
           </Box>
           
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}

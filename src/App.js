@@ -6,23 +6,25 @@ import Home from './components/home';
 import Story from './components/story';
 import ResponsiveAppBar  from './components/Header';
 import Contact from "./components/contact";
-import { createTheme, ThemeProvider, useTheme, styled, typography } from '@mui/material/styles';
-import { green, purple, grey } from '@mui/material/colors';
+import { createTheme, responsiveFontSizes, ThemeProvider, useTheme, styled, typography } from '@mui/material/styles';
+import { red, pink, green, purple, grey } from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';
 
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: purple[500],
+      main: pink['A200'],
     },
     secondary: {
-      main: grey[200],
+      main: grey[50],
     },
   },
   typography: {
     h1: {
+      fontSize: '2.48 rem',
       fontWeight: 600,
+      color:"#212121",
     },
   },
   

@@ -14,6 +14,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActions';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CssBaseline from '@mui/material/CssBaseline';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -28,11 +29,10 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Home() {
 	return (
     
-	<Container maxWidth="xl">
+	<Container maxWidth="xl" disableGutters="true">
     
 		<Box sx={{  minHeight: '100vh', 
     width:'100vw',
-    p:0,
     display:'flex', justifyContent:'center', 
     alignItems: 'center', 
     textAlign:'left', 
@@ -40,12 +40,21 @@ export default function Home() {
     backgroundRepeat:"no-repeat",
     backgroundSize:"cover",
     }} >
-			<Typography variant='h1' color="primary">
-				Designing for the Human Experience.
-			</Typography>
-		</Box>
+      <Box sx={{width:'60%',}}>
 
-		<Box sx={{ width: '100%', maxWidth: 1920 }}>
+<Stack spacing={1} direction="column">
+			<Typography variant='h1'>
+				Designing for the Human Experience
+			</Typography>
+      <Box sx={{ flexGrow: 2, display: { md: 'flex' } }}>
+      <Button variant="contained" size="large">Learn More...</Button>
+      </Box>
+      </Stack>
+		</Box>
+      </Box>
+      
+
+		<Box sx={{ width: '100%' }}>
 		<Card sx={{ maxWidth: 1200 }}>
       <CardActionArea>
         <CardMedia
