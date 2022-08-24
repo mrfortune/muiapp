@@ -40,7 +40,7 @@ export default function Home() {
     backgroundRepeat:"no-repeat",
     backgroundSize:"cover",
     }} >
-      <Box sx={{width:'60%',}}>
+      <Box sx={{width:'70%',}}>
 
 <Stack spacing={1} direction="column">
 			<Typography variant='h1'>
