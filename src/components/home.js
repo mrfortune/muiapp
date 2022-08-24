@@ -14,6 +14,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActions';
+import CssBaseline from '@mui/material/CssBaseline';
 
 const Item = styled(Paper)(({ theme }) => ({
 	backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -26,12 +27,15 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Home() {
 	return (
-	<Container maxwidth="sx">
+    
+	<Container maxWidth="xl">
+    
 		<Box sx={{  minHeight: '100vh', 
+    width:'100vw',
+    p:0,
     display:'flex', justifyContent:'center', 
     alignItems: 'center', 
-    textAlign:'center', 
-    height:'100vh', 
+    textAlign:'left', 
     backgroundImage:`url(${process.env.PUBLIC_URL + '/assets/bg_new.jpeg'})`,
     backgroundRepeat:"no-repeat",
     backgroundSize:"cover",
@@ -41,7 +45,7 @@ export default function Home() {
 			</Typography>
 		</Box>
 
-		<Box sx={{ width: '100%', maxWidth: 1200 }}>
+		<Box sx={{ width: '100%', maxWidth: 1920 }}>
 		<Card sx={{ maxWidth: 1200 }}>
       <CardActionArea>
         <CardMedia
