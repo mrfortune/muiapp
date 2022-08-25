@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 import Diversity2Icon from '@mui/icons-material/Diversity2';
 import DragHandleIcon from '@mui/icons-material/DragHandle';
 
-const pages = ["Story", "Contact"];
+const pages = ["Home","Story", "Contact"];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -43,15 +43,20 @@ const MenuBox = styled(Box)({
 display:"flex",
 gap:30,
 
-})
+});
   return (
     <AppBar position="static" color="secondary">
       <Container maxWidth="false">
         <Toolbar disableGutters>
-        <Diversity2Icon/>
+          <Box sx={{ flexGrow: 12, }}>
+ <Diversity2Icon >
 
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
+  </Diversity2Icon>
+
+            </Box>
+       
+          <Box sx={{ display: { xs: 'flex', md: 'none', horizontal:'right' } }}>
+            {/* <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -60,8 +65,8 @@ gap:30,
               color="inherit"
             >
               <MenuIcon />
-            </IconButton>
-            <Menu
+            </IconButton>  */}
+            {/* <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -79,31 +84,42 @@ gap:30,
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              <MenuBox>
-
-              </MenuBox>
+              
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
+                  <Typography textAlign="left">
                     <Link to={`/${page}`}>{page}</Link>
                     </Typography>
                 </MenuItem>
-              ))}
-            </Menu>
+              ))} 
+            </Menu>  */}
+           
           </Box>
           
-          <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' } }}>
+          {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', horizontal:'right' } }}>
             {pages.map((page) => (
-              <Button
+              <Typography
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                  <Link style ={{textDecoration: "none", color: "black"}}to={`/${page}`}>{page}</Link>
-              </Button>
+              </Typography>
+              
+            ))} 
+          </Box> */}
+          <MenuBox sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', horizontal:'right' } }}>
+ {pages.map((page) => (
+              <Typography
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'black', display: 'block' }}
+              >
+                 <Link style ={{textDecoration: "none", color: "black"}}to={`/${page}`}>{page}</Link>
+              </Typography>
+              
             ))}
-          </Box>
-
+              </MenuBox>
          
         </Toolbar>
       </Container>
