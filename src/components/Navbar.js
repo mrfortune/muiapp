@@ -1,5 +1,6 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
+import { createTheme, responsiveFontSizes, ThemeProvider, useTheme, styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
@@ -38,7 +39,11 @@ const ResponsiveAppBar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+const MenuBox = styled(Box)({
+display:"flex",
+gap:30,
 
+})
   return (
     <AppBar position="static" color="secondary">
       <Container maxWidth="false">
@@ -74,6 +79,9 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
+              <MenuBox>
+
+              </MenuBox>
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
