@@ -20,6 +20,9 @@ const theme = createTheme({
       main: grey[50],
     },
   },
+  MuiContainer:{
+
+  },
   typography: {
     h1: {
       fontSize: '2.48 rem',

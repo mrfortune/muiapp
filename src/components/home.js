@@ -29,7 +29,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Home() {
 	return (
     
-	<Container maxWidth="xl" disableGutters="true">
+	<Container maxWidth="false" disableGutters="true">
     
 		<Box sx={{  minHeight: '100vh', 
     width:'100vw',
@@ -55,7 +55,7 @@ export default function Home() {
       
 
 		<Box sx={{ width: '100%' }}>
-		<Card sx={{ maxWidth: 1200 }}>
+		<Card sx={{  }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -80,7 +80,7 @@ export default function Home() {
       </CardActions>
     </Card>
 
-	<Card sx={{ maxWidth: 1200, maxHeight: 100 }}>
+	<Card sx={{  }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -105,7 +105,7 @@ export default function Home() {
       </CardActions>
     </Card>
 
-	<Card sx={{ maxWidth: 1200 }}>
+	<Card sx={{  }}>
       <CardActionArea>
         <CardMedia
           component="img"
