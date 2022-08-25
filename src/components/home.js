@@ -44,7 +44,7 @@ export default function Home() {
 
 <Stack spacing={1} direction="column">
 			<Typography variant='h1'>
-				Designing for the Human Experience
+				Human-Centered Digital Design Experience
 			</Typography>
       <Box sx={{ flexGrow: 2, display: { md: 'flex' } }}>
       <Button variant="contained" size="large">Learn More...</Button>
