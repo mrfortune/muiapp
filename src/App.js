@@ -4,7 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Home from './components/home';
 import Story from './components/story';
-import ResponsiveAppBar  from './components/Header';
+import ResponsiveAppBar  from './components/Navbar';
 import Contact from "./components/contact";
 import { createTheme, responsiveFontSizes, ThemeProvider, useTheme, styled, typography } from '@mui/material/styles';
 import { red, pink, green, purple, grey } from '@mui/material/colors';
