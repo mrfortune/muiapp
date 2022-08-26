@@ -24,8 +24,8 @@ import DragHandleIcon from '@mui/icons-material/DragHandle';
 const ResponsiveAppBar = () => {
 
 const MenuItems = [{Name:"Home", Link:'/'},
-{ Name:"Story", Link:'#'},
-{ Name:"Contact Us", Link:'#'},
+{ Name:"Story", Link:'/Story'},
+{ Name:"Contact Us", Link:'/Contact'},
 
 ];
 const [open, SetOpen] = React.useState(false);
@@ -33,7 +33,6 @@ const [open, SetOpen] = React.useState(false);
 const MenuBox = styled(Box)({
 display:"flex",
 gap:30,
-
 });
 return (
     <AppBar position="static" color="secondary">
