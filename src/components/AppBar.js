@@ -30,13 +30,13 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left' }}>
       <Divider />
-      <List sx={{ horizontal: 'right'}}>
+      <List sx={{ horizontal: 'right',}}>
         {navItems.map((item) => (
           <ListItem key={item} 
           component={Link} 
-            to={`/${item}`} sx={{ textAlign: 'left' }}
+            to={`/${item}`} sx={{ textAlign: 'left',  }}
           disablePadding>
-            <ListItemButton sx={{ textAlign: 'left' }}>
+            <ListItemButton sx={{ textAlign: 'left', fontSize: 14,}}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
