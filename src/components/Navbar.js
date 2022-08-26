@@ -56,7 +56,7 @@ gap:30,
             </Box>
        
           <Box sx={{ display: { xs: 'flex', md: 'none', horizontal:'right' } }}>
-            {/* <IconButton
+             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -65,8 +65,9 @@ gap:30,
               color="inherit"
             >
               <MenuIcon />
-            </IconButton>  */}
-            {/* <Menu
+            </IconButton>  
+            
+            <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -84,15 +85,19 @@ gap:30,
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              
+              <Box sx={{ width:350, height:'90vh', }}>
+
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="left">
-                    <Link to={`/${page}`}>{page}</Link>
+                    <Link style ={{textDecoration: "none", color: "black"}} to={`/${page}`}>{page}</Link>
                     </Typography>
                 </MenuItem>
               ))} 
-            </Menu>  */}
+              </Box>
+              
+              
+            </Menu> 
            
           </Box>
           
