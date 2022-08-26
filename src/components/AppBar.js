@@ -36,7 +36,7 @@ function DrawerAppBar(props) {
           component={Link} 
             to={`/${item}`} sx={{ textAlign: 'left',  }}
           disablePadding>
-            <ListItemButton sx={{ textAlign: 'left', fontSize: 14,}}>
+            <ListItemButton sx={{ textAlign: 'left', fontSize: '12px', textTransform:'uppercase', color:'black'}}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
