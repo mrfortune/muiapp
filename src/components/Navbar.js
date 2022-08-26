@@ -23,9 +23,15 @@ import DragHandleIcon from '@mui/icons-material/DragHandle';
 
 const ResponsiveAppBar = () => {
 
-const MenuItems = [{Name:"Home", Link:'/'},
-{ Name:"Story", Link:'/Story'},
-{ Name:"Contact Us", Link:'/Contact'},
+const MenuItems = [
+  {Name:"Home", 
+  Link:'/'},
+{ 
+  Name:"Story", 
+Link:'/Story'},
+{ 
+  Name:"Contact Us", 
+  Link:'/Contact'},
 
 ];
 const [open, SetOpen] = React.useState(false);
