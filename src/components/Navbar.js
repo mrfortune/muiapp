@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 import Diversity2Icon from '@mui/icons-material/Diversity2';
 import DragHandleIcon from '@mui/icons-material/DragHandle';
 
-const pages = ["Home","Story", "Contact"];
+const pages = ['Home','Story', 'Contact'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -70,6 +70,7 @@ gap:30,
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
+              open={true}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'right',
@@ -99,29 +100,15 @@ gap:30,
             </Menu> 
            
           </Box>
-          
-          {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', horizontal:'right' } }}>
-            {pages.map((page) => (
-              <Typography
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                 <Link style ={{textDecoration: "none", color: "black"}}to={`/${page}`}>{page}</Link>
-              </Typography>
-              
-            ))} 
-          </Box> */}
           <MenuBox sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', horizontal:'right' } }}>
  {pages.map((page) => (
-              <Typography
+              <MenuItem
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' }}
+                sx={{ my: 2, color: 'black', display: 'block', fontSize:"14px", }}
               >
                  <Link style ={{textDecoration: "none", color: "black"}}to={`/${page}`}>{page}</Link>
-              </Typography>
-              
+              </MenuItem>
             ))}
               </MenuBox>
          
