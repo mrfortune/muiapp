@@ -85,8 +85,7 @@ gap:30,
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              <Box sx={{ width:350, height:'90vh', }}>
-
+              <Box sx={{ width:350, height:'90vh',}}>
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="left">
