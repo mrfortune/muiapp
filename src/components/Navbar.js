@@ -22,29 +22,14 @@ import DragHandleIcon from '@mui/icons-material/DragHandle';
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-};
+const MenuItems = [{Name:"Home", Link:'/'},
+{ Name:"Story", Link:'#'},
+{ Name:"Contact Us", Link:'#'},
 
-const MenuItems = [{Name:'Home', Link:'/'},
-{ Name:'Story', Link:'#'},
-{ Name:'Contact Us', Link:'#'},
+];
+const [open, SetOpen] = React.useState(false);
 
-]
-const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 const MenuBox = styled(Box)({
 display:"flex",
 gap:30,
@@ -67,16 +52,20 @@ return (
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon sx={{ 
+                color:"black", 
+                display:{xs:"block", sm:"block", md:"none"},
+              }}
+            onClick = {() => SetOpen (!open)}
+            />
             </IconButton>  
             
             <Menu
               id="menu-appbar"
-              anchorEl={anchorElNav}
-              open={true}
+              open={open}
+              onClose ={() => SetOpen (!open)}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'right',
@@ -86,13 +75,12 @@ return (
                 vertical: 'top',
                 horizontal: 'right',
               }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              <Box sx={{ width:350, height:'90vh',}}>
+              <Box sx={{ width:350, height:'90vh', p: '20',}}>
               {MenuItems.map((item) => (
               <Typography sx={{ cursor: "pointer", my: 2, color: 'black', display: 'block', fontSize:"14px", }}>{item.Name}
               </Typography>
