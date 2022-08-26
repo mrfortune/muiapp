@@ -15,7 +15,6 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActions';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import CssBaseline from '@mui/material/CssBaseline';
 
 const Item = styled(Paper)(({ theme }) => ({
 	backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

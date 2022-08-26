@@ -46,17 +46,17 @@ const theme = createTheme({
 
 function App() {
   return (
-    <>   
+    <div>   
      <CssBaseline />
     <ThemeProvider theme ={theme}>
     <DrawerAppBar/> 
       <Routes>
     <Route path="/" element={<Home />} /> 
-    <Route path="Story" element={<Story />} />
-    <Route path="Contact" element={<Contact />} />
+    <Route path="/Story" element={<Story />} />
+    <Route path="/Contact" element={<Contact />} />
   </Routes>
     </ThemeProvider>
-    </>
+    </div>
   );
 }
 

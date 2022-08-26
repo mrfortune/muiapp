@@ -14,9 +14,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Diversity2Icon from '@mui/icons-material/Diversity2';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'Story', 'Contact'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -31,7 +32,10 @@ function DrawerAppBar(props) {
       <Divider />
       <List sx={{ horizontal: 'right'}}>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item} 
+          component={Link} 
+            to={`/${item}`} sx={{ textAlign: 'left' }}
+          disablePadding>
             <ListItemButton sx={{ textAlign: 'left' }}>
               <ListItemText primary={item} />
             </ListItemButton>
@@ -48,7 +52,8 @@ function DrawerAppBar(props) {
       <AppBar component="nav">
         <Toolbar>
             <Box sx={{ flexGrow: 12, }}>
-<Diversity2Icon/>
+<Diversity2Icon
+/>
             </Box>
             
           <IconButton
@@ -56,14 +61,17 @@ function DrawerAppBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none', horizontal: 'right' } }}
+            sx={{ mr: 2, display: { xs:'block', sm: 'block', md: 'none', horizontal: 'right' } }}
           >
             <MenuIcon />
           </IconButton>
           
-          <Box sx={{ display: { xs: 'none', sm: 'block', horizontal: 'right' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'none', md:'block', horizontal: 'right' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} 
+              component={Link} 
+              to={`/${item}`} 
+              sx={{ color: '#fff' }}>
                 {item}
               </Button>
             ))}
@@ -81,7 +89,7 @@ function DrawerAppBar(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none', horizontal:'right' },
+            display: { xs: 'block', sm: 'block', md:'none', horizontal:'right' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
