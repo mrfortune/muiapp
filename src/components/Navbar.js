@@ -34,6 +34,11 @@ Link:'/Story'},
   Link:'/Contact'},
 
 ];
+
+const handleLinkClick = pageURL => [
+  history.push(pageURL),
+];
+
 const [open, SetOpen] = React.useState(false);
 
 const MenuBox = styled(Box)({
