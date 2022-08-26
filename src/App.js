@@ -4,7 +4,7 @@ import { Routes, Route, Switch } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Home from './components/home';
 import Story from './components/story';
-import ResponsiveAppBar  from './components/Navbar';
+import DrawerAppBar from './components/AppBar';
 import Contact from "./components/contact";
 import { createTheme, responsiveFontSizes, ThemeProvider, useTheme, styled, typography } from '@mui/material/styles';
 import { red, pink, green, purple, grey } from '@mui/material/colors';
@@ -42,14 +42,6 @@ const theme = createTheme({
       '"Segoe UI Symbol"',
     ].join(','),
   },
-  
-  
-  // root:{
-  //   minHeight: '100vh',
-  //   backgroundImage:`url(${process.env.PUBLIC_URL + '/assets/bg_new.jpeg'})`,
-  //   backgroundRepeat:"no-repeat",
-  //   backgroundSize:"cover",
-  // },
 });
 
 function App() {
@@ -57,8 +49,7 @@ function App() {
     <>   
      <CssBaseline />
     <ThemeProvider theme ={theme}>
-    <ResponsiveAppBar/>
-
+    <DrawerAppBar/> 
       <Routes>
     <Route path="/" element={<Home />} /> 
     <Route path="Story" element={<Story />} />
