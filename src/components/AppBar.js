@@ -15,9 +15,13 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Diversity2Icon from '@mui/icons-material/Diversity2';
 import { Link } from 'react-router-dom';
+//import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom/server';
+//import Link from '@mui/material/Link';
+import { LinkProps } from '@mui/material/Link';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Story', 'Contact'];
+const navItems = ['Story', 'Contact'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -52,8 +56,7 @@ function DrawerAppBar(props) {
       <AppBar component="nav">
         <Toolbar>
             <Box sx={{ flexGrow: 12, }}>
-<Diversity2Icon
-/>
+              <Link to = "/"><Diversity2Icon sx={{color:'whitesmoke'}}></Diversity2Icon></Link>
             </Box>
             
           <IconButton

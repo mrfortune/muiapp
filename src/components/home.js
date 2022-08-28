@@ -16,35 +16,30 @@ import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActions';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-const Item = styled(Paper)(({ theme }) => ({
-	backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-	...theme.typography.body2,
-	padding: theme.spacing(1),
-	textAlign: 'center',
-	color: theme.palette.text.secondary,
-  }));
-
-
 export default function Home() {
 	return (
     
 	<Container maxWidth="false" disableGutters="true">
     
-		<Box sx={{  minHeight: '100vh', 
-    width:'100vw',
-    display:'flex', justifyContent:'center', 
+		<Box sx={{  
+    height: '100vh', 
+    maxHeight:'100vh',
+    maxWidth:'100vw',
+    display:'flex', 
+    justifyContent:'left', 
     alignItems: 'center', 
     textAlign:'left', 
-    backgroundImage:`url(${process.env.PUBLIC_URL + '/assets/bg_new.jpeg'})`,
+    backgroundImage:`url(${process.env.PUBLIC_URL + '/assets/bg_new.png'})`,
     backgroundRepeat:"no-repeat",
     backgroundSize:"cover",
     }} >
-      <Box sx={{width:'70%',}}>
+      <Box sx={{width:'65vw',}}>
 
 <Stack spacing={1} direction="column">
-			<Typography variant='h1'>
-				Human-Centered Digital Design Experience
+			<Typography variant='h1' sx={{width: "40vw",}}>
+				Centering the Human in our Design Approach
 			</Typography>
+      <Typography variant='body1' sx={{width:"40vw",}}>Employing the user centered, hands-on approach to problem solving through UX design and engineering digital products.</Typography>
       <Box sx={{ flexGrow: 2, display: { md: 'flex' } }}>
       <Button variant="contained" size="large">Learn More...</Button>
       </Box>
@@ -53,13 +48,13 @@ export default function Home() {
       </Box>
       
 
-		<Box sx={{ width: '100%' }}>
+		<Box sx={{ width: '100%', alignItems:'center' }}>
 		<Card sx={{  }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image="/assets/winecontent.png"
+          height="100%"
+          image="https://placehold.jp/1200x630.png"
           alt="green iguana"
         />
         <CardContent>
@@ -83,7 +78,7 @@ export default function Home() {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="100%"
           image="/assets/fadecontent.png"
           alt="green iguana"
         />
@@ -108,7 +103,7 @@ export default function Home() {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="100%"
           image="/assets/wsgrcontent.png"
           alt="green iguana"
         />
