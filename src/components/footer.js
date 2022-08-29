@@ -5,6 +5,7 @@ import FolderIcon from '@mui/icons-material/Folder';
 import RestoreIcon from '@mui/icons-material/Restore';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Paper } from '@mui/material';
 
 export default function LabelBottomNavigation() {
   const [value, setValue] = React.useState('recents');
@@ -15,6 +16,8 @@ export default function LabelBottomNavigation() {
 
   return (
     <BottomNavigation sx={{ width: '100vw', }} value={value} onChange={handleChange}>
+      <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+       
       <BottomNavigationAction
         label="Recents"
         value="recents"
@@ -31,6 +34,8 @@ export default function LabelBottomNavigation() {
         icon={<LocationOnIcon />}
       />
       <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
-    </BottomNavigation>
+   </Paper> 
+   </BottomNavigation>
+    
   );
 }

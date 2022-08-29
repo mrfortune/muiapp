@@ -108,7 +108,9 @@ const theme = createTheme({
 
 function App() {
   return (
-    <div className="App">
+  <ThemeProvider theme={theme}> 
+  <CssBaseline/>
+    <div>
 
 <DrawerAppBar/> 
  <Routes>
@@ -116,19 +118,14 @@ function App() {
   <Route path="/Story" element={<Story />} />
   <Route path="/Contact" element={<Contact />} />
   </Routes> 
-<LabelBottomNavigation/>
+<LabelBottomNavigation/> 
+
     </div>
-   //<CssVarsProvider>
- //<ThemeProvider>  
-    //<Paper sx={{
-//background: 'linear-gradient(133deg, rgba(252,0,0,0.7273503151260504) 0%, rgba(246,246,246,1) 8%, rgba(240,240,240,1) 100%)',}}>   
-     //<CssBaseline /> 
+
+ </ThemeProvider>
     
-  //   
-  //    
-    //</Paper>
-//</ThemeProvider> 
- //</CssVarsProvider> 
+
+
   );
 }
 export default App;
