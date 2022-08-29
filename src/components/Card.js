@@ -9,7 +9,7 @@ import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
 export default function ContentCardsGradient() {
   return (
     <CssVarsProvider>
-        <Card  sx={{ minHeight: '280px', minWidth: 320, maxWidth:'40vw', horizontal:'center', }}>
+        <Card  sx={{ minHeight: '280px', minWidth: 320, horizontal:'center', }}>
       <CardCover>
         <img
           src="https://images.unsplash.com/photo-1542773998-9325f0a098d7?crop=entropy&auto=format&fit=crop&w=3271"

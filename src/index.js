@@ -24,6 +24,10 @@ import CssBaseline from '@mui/material/CssBaseline';
 // );
 const rootElement = document.getElementById("root");
 render(
+  <React.Fragment>
+
+
+  
   <BrowserRouter>
  {/* <ThemeProvider theme={theme}> */}
   <App/>
@@ -35,7 +39,8 @@ render(
       <Route path="contact" element={<Contact />} /> */}
   </Routes> 
      
-  </BrowserRouter>,
+  </BrowserRouter>
+  </React.Fragment>,
 
   rootElement
 );
