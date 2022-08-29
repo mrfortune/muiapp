@@ -14,11 +14,16 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Diversity2Icon from '@mui/icons-material/Diversity2';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { Link } from 'react-router-dom';
 //import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
 import { StaticRouter } from 'react-router-dom/server';
 //import Link from '@mui/material/Link';
 import { LinkProps } from '@mui/material/Link';
+import { ThemeProvider } from '@mui/material';
+import basetheme from '../theme/theme';
+import Slide from '@mui/material/Slide';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const drawerWidth = 240;
 const navItems = ['Story', 'Contact'];
@@ -30,7 +35,30 @@ function DrawerAppBar(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
+  function HideOnScroll(props) {
+    const { children, window } = props;
+    // Note that you normally won't need to set the window ref as useScrollTrigger
+    // will default to window.
+    // This is only being set here because the demo is in an iframe.
+    const trigger = useScrollTrigger({
+      target: window ? window() : undefined,
+    });
+  
+    return (
+      <Slide appear={false} direction="down" in={!trigger}>
+        {children}
+      </Slide>
+    );
+  }
+  HideOnScroll.propTypes = {
+    children: PropTypes.element.isRequired,
+    /**
+     * Injected by the documentation to work in an iframe.
+     * You won't need it on your project.
+     */
+    window: PropTypes.func,
+  };
+  
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left' }}>
       <Divider />
@@ -52,11 +80,15 @@ function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppBar component="nav">
+   
+    <Box sx={{ display: 'flex' }}>  
+
+    <ThemeProvider theme={basetheme}>
+    <HideOnScroll {...props}>
+      <AppBar component="nav" color="transparent" elevation={0} >
         <Toolbar>
             <Box sx={{ flexGrow: 12, }}>
-              <Link to = "/"><Diversity2Icon sx={{color:'whitesmoke'}}></Diversity2Icon></Link>
+              <Link to = "/"><Diversity2Icon sx={{color:'blacksmoke'}}></Diversity2Icon></Link>
             </Box>
             
           <IconButton
@@ -74,13 +106,15 @@ function DrawerAppBar(props) {
               <Button key={item} 
               component={Link} 
               to={`/${item}`} 
-              sx={{ color: '#fff' }}>
+              sx={{ color: 'black' }}>
                 {item}
               </Button>
             ))}
           </Box>
         </Toolbar>
       </AppBar>
+      </HideOnScroll>
+      </ThemeProvider>
       <Box component="nav">
         <Drawer
         anchor="right"
@@ -99,7 +133,7 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </Box>
- 
+
     </Box>
   );
 }
