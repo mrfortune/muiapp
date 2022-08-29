@@ -18,14 +18,11 @@ import ContentCardsGradient from "./Card";
 import  Hero from './Hero';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { ThemeProvider } from "@mui/joy";
-import basetheme from "../theme/theme";
+import basetheme from "../theme/Theme";
 
-export default function Home() {
-	return (
-    
-
-    
-	<Container maxWidth="false" disableGutters="true">
+const Home = () => {
+  return(
+<Container maxWidth="false" disableGutters="true">
   <Hero>
     </Hero>  
 		{/* <Box sx={{  
@@ -85,78 +82,14 @@ export default function Home() {
    
 	</Container>
 
-		
-			/*   <Grid item xs={12}>
-		<Item><div className="hero-overlay">
-                               
-								<Button variant="contained">Contained</Button>
-                        
-                            
-                        </div>
-						</Item> 
-		  </Grid>
+  )
+}
+export default Home
+    
 
-		  <Grid item xs={12}>
-			<Item> <h4 className="text-white">Prior Clients</h4></Item>
-		  </Grid>
-		  <Grid item xs={12}>
-			<Item><img src="img/workbanner.png" className="img-fluid wow fadeInUp"/></Item>
-		  </Grid>
-		
-		  <Grid item xs={12}>
-			<Item>
-			<div className="portfolio-item d-flex align-items-center">
-                    <div className="text-box">
-                        <h3 className="mb-3">Fade Tech Solutions</h3>
-                    <p>Fade Tech Solutions needed a dashboard design and here is what the team and I came up with.</p>
-                    <a href="fade.html" className="">Case Study...</a>
-                    </div>
-                    <div className="imageboxcontent">
-                        <img src="img/fadecontent.png"/>   
-                    </div>
-                </div>
-
-			</Item>
-
-		  </Grid>
-		  <Grid item xs={12}>
-			<Item>
-				<div className="portfolio-item d-flex align-items-center">
-            
-            <div className="imageboxcontent">
-                 <img src="img/winecontent.png" /> 
-            </div>	
-            <div className="text-box">
-                <h3 className="mt-5 mb-3">BK Wine Cellar's Digital Experience</h3>
-    <p>A local wine store needed a well organized shopping experience for it's customers.</p>
-            </div>
-        </div></Item>
-		  </Grid>
-		  <Grid item xs={12}>
-			<Item> <img src="img/wsgrcontent.png" />
-			</Item>
-		  </Grid>
-		  <Grid item xs={12}>
-<Item>
-
-        
-    <h2 className="mb-3">Process</h2>
-    <img src="img/process.png"/>				
-        
-        
-   
-
-</Item>
-
-		  </Grid>
-		</Grid> 
-
-		</Box>
-
-*/
+    
 	
+
 		
-	  
-	);
-  }
+		
 

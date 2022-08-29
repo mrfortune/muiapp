@@ -7,30 +7,27 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 
+const Story = () => {
+	return(
+		<Container>
+		<Box sx={{ flexGrow: 1 }}>
+		  <Typography variant="body1">
+			  I am Robert Harris, and I am a UX Engineer, Designer, 
+			  Researcher, and Architect. I have worked with large brands successfully 
+			  delivering digital products and solutions for their customers and business. 
+			  I collaborate with cross-functional teams to deliver these solutions. 
+  
+	  </Typography>
+				  
+		</Box>
+		</Container>
+	)
+}
+export default Story
 
-export default function Story() {
-	return (
-		<React.Fragment>
-<Container>
 
 
-		
-	  <Box sx={{ flexGrow: 1 }}>
-		<Typography variant="body1">
-			I am Robert Harris, and I am a UX Engineer, Designer, 
-			Researcher, and Architect. I have worked with large brands successfully 
-			delivering digital products and solutions for their customers and business. 
-			I collaborate with cross-functional teams to deliver these solutions. 
-
-	</Typography>
-				
-	  </Box>
-	  </Container>
-
-</React.Fragment>
-		
-	);
-  }
+	
 /* const About = () => {
 	return 
 	<div className="App">

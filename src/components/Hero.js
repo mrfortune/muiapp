@@ -8,7 +8,7 @@ import { CssVarsProvider } from '@mui/joy/styles';
 import Button from '@mui/joy/Button';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-export default function Hero() {
+const Hero = () => {
   return (
     <CssVarsProvider>
     <Box
@@ -73,3 +73,4 @@ export default function Hero() {
     </CssVarsProvider>
   );
 }
+export default Hero

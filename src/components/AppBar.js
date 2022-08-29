@@ -21,7 +21,7 @@ import { StaticRouter } from 'react-router-dom/server';
 //import Link from '@mui/material/Link';
 import { LinkProps } from '@mui/material/Link';
 import { ThemeProvider } from '@mui/material';
-import basetheme from '../theme/theme';
+import basetheme from '../theme/Theme';
 import Slide from '@mui/material/Slide';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
