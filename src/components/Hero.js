@@ -27,12 +27,12 @@ justifyContent:'center',
 }}>
 <Box sx={{display:'flexbox', justifyContent:'center', alignItems:'left', minWidth:'20vw', width:'90vw',}}>
 
-<Typography variant="h1"  mb={2}>
-Design Thinking for the Human
+<Typography variant="h1"  mb={2} sx={{ width: '55vw', }}>
+Data driven design-thinking practioners.
 </Typography>
-<Typography variant="body2" mb={2}>
+<Typography variant="body2" mb={2} sx={{width:'55vw',}}>
 
-Lorem ispsum a;sjdna;sjndf.sajndff/salfnjsflasjnfa afkajbnf;asjnfa
+UX/UI design and engineering practioners who focus on identifying user pain-points and problems and designing solutions that work.
 </Typography>
 <Button color="primary" variant="outlined">
 Learn More...

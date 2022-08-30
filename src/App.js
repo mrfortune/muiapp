@@ -24,11 +24,9 @@ const muiTheme = extendMuiTheme();
 
 
 const theme = createTheme({
-  root:{
 body:{
 background:'linear-gradient(133deg, rgba(252,0,0,0.7273503151260504) 0%, rgba(246,246,246,1) 8%, rgba(240,240,240,1) 100%)',
 },
-  },
   palette: {
     primary: {
       main: pink['A200'],
@@ -40,7 +38,7 @@ background:'linear-gradient(133deg, rgba(252,0,0,0.7273503151260504) 0%, rgba(24
   typography: {
     h1: {
       fontSize: '2.48 rem',
-      fontWeight: 600,
+      fontWeight: 900,
       color:"#212121",
     },
     fontFamily: [
