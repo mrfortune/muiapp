@@ -7,7 +7,7 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import Container  from '@mui/material/Container';
-import { Typography, useTheme } from "@mui/material";
+import { Typography } from "@mui/material";
 import ContentCardsGradient from "./Card";
 // import Card from '@mui/material/Card';
 // import CardHeader from '@mui/material/CardHeader';

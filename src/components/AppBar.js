@@ -21,6 +21,7 @@ import { LinkProps } from '@mui/material/Link';
 import { ThemeProvider } from '@mui/material';
 import basetheme from '../theme/Theme';
 import Slide from '@mui/material/Slide';
+import Diversity3SharpIcon from '@mui/icons-material/Diversity3Sharp';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const drawerWidth = 240;
@@ -85,7 +86,13 @@ function DrawerAppBar(props) {
     <HideOnScroll {...props}>
       <AppBar component="nav" color="transparent" elevation={0} >
         <Toolbar>
-            
+        <Box sx={{ flexGrow: 12, }}>
+ 
+<Link to="/"><Diversity3SharpIcon sx={{flexGrow: 12,}}/></Link>
+  
+
+            </Box>
+        
           <IconButton
             color="inherit"
             aria-label="open drawer"
