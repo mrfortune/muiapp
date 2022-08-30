@@ -1,21 +1,19 @@
 import * as React from "react";
 import { Routes, Route, Switch } from "react-router-dom";
-import './App.css';
+//import './App.css';
 import { deepmerge } from '@mui/utils';
 import {
   useColorScheme,
   Experimental_CssVarsProvider as CssVarsProvider,
   experimental_extendTheme as extendMuiTheme,
 } from '@mui/material/styles';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import { extendTheme as extendJoyTheme } from '@mui/joy/styles';
 import Home from './components/Home';
 import Story from './components/Story';
 import DrawerAppBar from './components/AppBar';
 import Contact from './components/Contact';
 import LabelBottomNavigation from './components/Footer';
+import { createTheme, Paper, responsiveFontSizes, ThemeProvider, useTheme, styled, typography, paperClasses } from '@mui/material/styles';
 import basetheme  from './theme/Theme';
-import { createTheme, Paper, responsiveFontSizes, ThemeProvider, useTheme, styled, typography, paperClasses } from '@mui/material';
 import { red, pink, green, purple, grey, blue } from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -24,53 +22,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 //       some of the values in the Joy UI theme refers to CSS variables abd not raw colors.
 const muiTheme = extendMuiTheme();
 
-const joyTheme = extendJoyTheme({
-  // This is required to point to `var(--mui-*)` because we are using `CssVarsProvider` from Material UI.
-  cssVarPrefix: 'mui',
-  colorSchemes: {
-    light: {
-      palette: {
-        primary: {
-          ...blue,
-          solidColor: 'var(--mui-palette-primary-contrastText)',
-          solidBg: 'var(--mui-palette-primary-main)',
-          solidHoverBg: 'var(--mui-palette-primary-dark)',
-          plainColor: 'var(--mui-palette-primary-main)',
-          plainHoverBg:
-            'rgba(var(--mui-palette-primary-mainChannel) / var(--mui-palette-action-hoverOpacity))',
-          plainActiveBg: 'rgba(var(--mui-palette-primary-mainChannel) / 0.3)',
-          outlinedBorder: 'rgba(var(--mui-palette-primary-mainChannel) / 0.5)',
-          outlinedColor: 'var(--mui-palette-primary-main)',
-          outlinedHoverBg:
-            'rgba(var(--mui-palette-primary-mainChannel) / var(--mui-palette-action-hoverOpacity))',
-          outlinedHoverBorder: 'var(--mui-palette-primary-main)',
-          outlinedActiveBg: 'rgba(var(--mui-palette-primary-mainChannel) / 0.3)',
-        },
-        neutral: {
-          ...grey,
-        },
-        // Do the same for the `danger`, `info`, `success`, and `warning` palettes,
-        divider: 'var(--mui-palette-divider)',
-        text: {
-          tertiary: 'rgba(0 0 0 / 0.56)',
-        },
-      },
-    },
-    // Do the same for dark mode
-    // dark: { ... }
-  },
-  fontFamily: {
-    display: '"Roboto","Helvetica","Arial",sans-serif',
-    body: '"Roboto","Helvetica","Arial",sans-serif',
-  },
-  shadow: {
-    xs: `var(--mui-shadowRing), ${muiTheme.shadows[1]}`,
-    sm: `var(--mui-shadowRing), ${muiTheme.shadows[2]}`,
-    md: `var(--mui-shadowRing), ${muiTheme.shadows[4]}`,
-    lg: `var(--mui-shadowRing), ${muiTheme.shadows[8]}`,
-    xl: `var(--mui-shadowRing), ${muiTheme.shadows[12]}`,
-  },
-});
+
 const theme = createTheme({
   palette: {
     primary: {
