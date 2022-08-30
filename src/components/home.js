@@ -17,7 +17,6 @@ import ContentCardsGradient from "./Card";
 // import CardActionArea from '@mui/material/CardActions';
 import  Hero from './Hero';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { ThemeProvider } from "@mui/joy";
 import basetheme from "../theme/Theme";
 
 const Home = () => {

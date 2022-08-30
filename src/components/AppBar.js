@@ -13,11 +13,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Diversity2Icon from '@mui/icons-material/Diversity2';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { Link } from 'react-router-dom';
 //import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
-import { StaticRouter } from 'react-router-dom/server';
 //import Link from '@mui/material/Link';
 import { LinkProps } from '@mui/material/Link';
 import { ThemeProvider } from '@mui/material';
@@ -87,9 +85,6 @@ function DrawerAppBar(props) {
     <HideOnScroll {...props}>
       <AppBar component="nav" color="transparent" elevation={0} >
         <Toolbar>
-            <Box sx={{ flexGrow: 12, }}>
-              <Link to = "/"><Diversity2Icon sx={{color:'blacksmoke'}}></Diversity2Icon></Link>
-            </Box>
             
           <IconButton
             color="inherit"
