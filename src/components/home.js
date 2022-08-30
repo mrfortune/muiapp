@@ -7,14 +7,18 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 import { Typography } from "@mui/material";
 import  Hero from './Hero';
 
+
 const Home = () => {
   return(
 <Container maxWidth="false" disableGutters={true}>
   <Hero>
     </Hero>  
 	
-      
+      <Box>
+<CardMedia  sx={{width:'100%',}} component="img" height="225" image="/assets/workbanner.png"/>
+      </Box>
 <Stack  display="flex" justifyContent="center" mt={{ xs: 6, sm: 8, lg: 18 }}  sx={{alignItems:'center',}}>
+<Box display="flex" justifyContent="center" mb={{xs: 12, sm: 18, md: 18, lg: 18}} sx={{ alignItems:'center', justifyContent:'center' }}>
 <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
@@ -39,6 +43,7 @@ const Home = () => {
         </Button>
       </CardActions>
     </Card>
+    </Box>
   <Box display="flex" justifyContent="center" mb={{xs: 12, sm: 18, md: 18, lg: 18}} sx={{ alignItems:'center', justifyContent:'center' }}>
   <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
