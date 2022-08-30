@@ -65,7 +65,7 @@ function App() {
   return (
   <ThemeProvider theme={theme}> 
   <CssBaseline/>
-    <div>
+  
 
 <DrawerAppBar/> 
  <Routes>
@@ -75,7 +75,7 @@ function App() {
   </Routes> 
 <LabelBottomNavigation/> 
 
-    </div>
+    
 
  </ThemeProvider>
     
