@@ -21,7 +21,7 @@ import basetheme from "../theme/Theme";
 
 const Home = () => {
   return(
-<Container maxWidth="false" disableGutters="true">
+<Container maxWidth="false" disableGutters={true}>
   <Hero>
     </Hero>  
 		{/* <Box sx={{  

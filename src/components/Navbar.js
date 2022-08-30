@@ -48,7 +48,7 @@ gap:30,
 return (
     <AppBar position="static" color="secondary">
       <Container maxWidth="false">
-        <Toolbar disableGutters>
+        <Toolbar>
           <Box sx={{ flexGrow: 12, }}>
  <Diversity2Icon >
 
