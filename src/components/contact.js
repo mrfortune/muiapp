@@ -15,8 +15,13 @@ function Mailto({ email, subject, body, ...props }) {
   
 const Contact = () => {
 	  return(	
-<Container>	  
+<Container maxWidth="lg">	  
 <Box mt={15} sx={{ flexGrow: 1, display: '-ms-flexbox', alignItems:'center', justifyContent:'center', maxWidth:'100vw', }}>
+	<Grid container spacing={2}>
+		
+	</Grid>
+	
+	
 	<Typography variant="h1">
 Contact Us
 	</Typography>
