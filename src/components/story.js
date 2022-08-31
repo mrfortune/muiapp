@@ -9,9 +9,15 @@ import Typography from '@mui/material/Typography';
 
 const Story = () => {
 	return(
-		<Container>
+		<Container maxWidth="lg">
 		<Box mt={15} sx={{ flexGrow: 1 }}>
-			<Typography variant="h1">My Story</Typography>
+			<Grid container spacing={2}>
+
+				<Grid item xs={3}>
+
+				</Grid>
+				<Grid item xs={6}>
+<Typography variant="h1">My Story</Typography>
 			<Typography mb={4} variant="h2">Robert S Harris, UX Engineer, Design Thinker &amp; Practioner</Typography>
 		  <Typography mb={2} variant="body1">
 			  I am Robert Harris, and I am a UX Engineer, Designer, 
@@ -35,6 +41,14 @@ const Story = () => {
 	  <Typography mb={2} variant="body1">
 	  I am still designing soltuons to problems and who knows may come up with another idea that can shake the world. But, for now, I am happy to share my skills with companies small, medium and large to help them deliver better user experiences to their customers.	  
 		</Typography>
+</Grid>
+<Grid item xs={3}>
+
+</Grid>	
+
+			</Grid>
+			
+			
 		</Box>
 		</Container>
 	)

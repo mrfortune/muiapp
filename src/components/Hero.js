@@ -27,10 +27,10 @@ justifyContent:'center',
 }}>
 <Box p={3} sx={{display:'flexbox', justifyContent:'center', alignItems:'left', minWidth:'20vw', maxWidth:'50vw',}}>
 
-<Typography variant="h1"  mb={2} sx={{ width: '50vw', }}>
+<Typography variant="h1"  mb={2} sx={{ width: '60vw', }}>
 Data driven, design-thinking practioners.
 </Typography>
-<Typography variant="body2" mb={2} sx={{width:'50vw',}}>
+<Typography variant="body2" mb={2} sx={{width:'60vw',}}>
 
 UX/UI design and engineering practioners who focus on identifying user pain-points and problems and designing solutions that work.
 </Typography>
