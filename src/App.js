@@ -24,9 +24,6 @@ const muiTheme = extendMuiTheme();
 
 
 const theme = createTheme({
-body:{
-background:'linear-gradient(133deg, rgba(252,0,0,0.7273503151260504) 0%, rgba(246,246,246,1) 8%, rgba(240,240,240,1) 100%)',
-},
   palette: {
     primary: {
       main: pink['A200'],
@@ -41,6 +38,10 @@ background:'linear-gradient(133deg, rgba(252,0,0,0.7273503151260504) 0%, rgba(24
       fontWeight: 900,
       color:"#212121",
     },
+    h2:{
+fontweight:400,
+fontSize:'2 rem',
+    },
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -53,6 +54,11 @@ background:'linear-gradient(133deg, rgba(252,0,0,0.7273503151260504) 0%, rgba(24
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(','),
+  },
+  MuiBottomNavigation:{
+    styleOverrides:{
+backgroundcolor:'transparent',
+    },
   },
 });
 //const muiTheme = extendMuiTheme();
@@ -71,7 +77,7 @@ function App() {
   <Route path="/Story" element={<Story />} />
   <Route path="/Contact" element={<Contact />} />
   </Routes> 
-<LabelBottomNavigation/> 
+<LabelBottomNavigation/>  
 
     
 

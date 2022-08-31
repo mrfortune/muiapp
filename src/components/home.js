@@ -14,9 +14,9 @@ const Home = () => {
   <Hero>
     </Hero>  
 	
-      <Box>
+      {/* <Box>
 <CardMedia  sx={{width:'100%',}} component="img" height="225" image="/assets/workbanner.png"/>
-      </Box>
+      </Box> */}
 <Stack  display="flex" justifyContent="center" mt={{ xs: 6, sm: 8, lg: 18 }}  sx={{alignItems:'center',}}>
 <Box display="flex" justifyContent="center" mb={{xs: 12, sm: 18, md: 18, lg: 18}} sx={{ alignItems:'center', justifyContent:'center' }}>
 <Card sx={{ maxWidth: 345 }}>
