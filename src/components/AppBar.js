@@ -25,7 +25,7 @@ import Diversity3SharpIcon from '@mui/icons-material/Diversity3Sharp';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const drawerWidth = 240;
-const navItems = ['Story', 'Contact'];
+const navItems = ['Story', 'Media', 'Contact'];
 
 function DrawerAppBar(props) {
   const { window } = props;
